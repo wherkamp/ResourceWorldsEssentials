@@ -1,5 +1,6 @@
 # ResourceWorldsEssentials
 
+Stops placement of warps inside ResourceWorlds
 
 Required Plugins:
 1. EssentialsX build 1087+

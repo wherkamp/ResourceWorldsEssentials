@@ -2,7 +2,6 @@ package me.kingtux.resourceworldsessentials;
 
 import me.kingtux.enumconfig.BukkitYamlHandler;
 import me.kingtux.enumconfig.EnumConfigLoader;
-import me.kingtux.resourceworlds.Locale;
 import me.kingtux.resourceworlds.ResourceWorld;
 import me.kingtux.resourceworlds.ResourceWorlds;
 import net.essentialsx.api.v2.events.WarpModifyEvent;
@@ -31,6 +30,7 @@ public final class ResourceWorldsEssentials extends JavaPlugin implements Listen
         if (e.getCause() == WarpModifyEvent.WarpModifyCause.CREATE) {
             for (ResourceWorld resourceWorld : ResourceWorlds.getInstance().getResourceWorlds()) {
                 if (resourceWorld.getPropertiesSection().getName().equals(e.getNewLocation().getWorld().getName())) {
+                    e.getUser().sendMessage(Locale.BAD_WARP_PLACEMENT.color());
                     e.setCancelled(true);
                 }
             }

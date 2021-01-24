@@ -1,0 +1,7 @@
+name: ResourceWorldsEssentials
+version: 1.0-SNAPSHOT
+main: me.kingtux.resourceworldsessentials.ResourceWorldsEssentials
+api-version: 1.16
+depend: [ ResourceWorlds, EssentialsX ]
+authors: [ KingTux ]
+description: Prevents essentials Warps and Homes from being set within ResourceWorlds
